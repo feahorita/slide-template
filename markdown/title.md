@@ -1,5 +1,5 @@
 ## Engenharia de Software
-### Aula 02
+### Aula 2
 
 <p style="text-align:center;">Prof. Dr. Flávio Eduardo Aoki Horita</p>
 <p style="text-align:center;"><small>Centro de Matemática, Computação e Cognição (CMCC)</small></p>
