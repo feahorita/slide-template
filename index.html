@@ -3,15 +3,16 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Engenharia de Software</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
 		<!-- Black (default) - White - League - Sky - Beige - Simple - Serif - Blood - Night - Moon - Solarized-->
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 		<!-- Align left text -->
 		<style type="text/css">
@@ -37,7 +38,6 @@
 	</head>
 	<body>
 		<div class="reveal">
-
 			<div class="slides">
 				<section class="center" data-markdown="./markdown/title.md"
          data-separator="^---"
@@ -75,7 +75,7 @@
 				slideNumber: true,
 
 				// Transition style
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
 
 				// Center Items
 				center: false,
@@ -87,12 +87,30 @@
 				// page/copying the URL will return you to the same slide
 				hash: true,
 
+				controls: false,
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/customcontrols/customcontrols.js' },
+					{ src: 'node_modules/reveal.js-menu/menu.js' }
+				],
+
+				customcontrols: {
+					slideNumberCSS : 'position: fixed; display: block; right: 90px; top: auto; left: auto; width: 50px; bottom: 30px; z-index: 31; font-family: Helvetica, sans-serif; font-size:  12px; line-height: 1; padding: 5px; text-align: center; border-radius: 10px; background-color: rgba(128,128,128,.5)',
+					controls: [
+						{ icon: '<i class="fa fa-caret-left"></i>',
+						  css: 'position: fixed; right: 60px; bottom: 30px; z-index: 30; font-size: 24px;',
+						  action: 'Reveal.prev(); return false;'
+						},
+						{ icon: '<i class="fa fa-caret-right"></i>',
+						  css: 'position: fixed; right: 30px; bottom: 30px; z-index: 30; font-size: 24px;',
+						  action: 'Reveal.next(); return false;'
+						}
+					]
+				},
 			});
 		</script>
 	</body>

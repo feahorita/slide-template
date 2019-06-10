@@ -1601,13 +1601,13 @@ body {
   position: absolute;
   text-align: center;
   width: 100%;
-  height: 1%;
+  height: 6%;
   top: 5px;
 }
 .footer{
   position: absolute;
   text-align: center;
   width: 100%;
-  height: 1%;
+  height: 2%;
   bottom: 1em;
 }
